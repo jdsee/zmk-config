@@ -38,8 +38,8 @@
             bindings = <
 &kp TAB               &kp Q  &kp W  &kp E  &kp R     &kp T                                                    &kp Y      &kp U     &kp I      &kp O    &kp P      &kp MINUS
 &mt LEFT_CONTROL ESC  &kp A  &kp S  &kp D  &kp F     &kp G                                                    &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp SQT
-&sk LEFT_SHIFT        &kp Z  &kp X  &kp C  &kp V     &kp B          &mo 6                         &caps_word  &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-                                           &kp LGUI  &kp BACKSPACE  &kp LEFT_ALT  &mo 1    &mo 2  &kp ENTER   &kp SPACE  &kp RGUI
+&sk LEFT_SHIFT        &kp Z  &kp X  &kp C  &kp V     &kp B          &mo 7                         &caps_word  &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
+                                           &kp LGUI  &kp BACKSPACE  &kp LEFT_ALT  &mo 1    &mo 3  &kp ENTER   &kp SPACE  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -55,10 +55,10 @@
  */
 
             bindings = <
-&kp Copy  &kp LA(N1)      &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)                                       &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)       &trans
-&trans    &kp LEFT_SHIFT  &kp LALT    &kp LCTRL   &kp LSHFT   &kp Paste                                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
-&trans    &kp F1          &kp F2      &kp F3      &kp F4      &kp F5      &kp Undo                   &kp Redo  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10          &kp RCTRL
-                                                  &trans      &trans      &trans    &trans    &mo 3  &trans    &trans      &trans
+&kp Copy  &kp LA(N1)      &kp LA(N2)         &kp LA(N3)        &kp LA(N4)       &kp LA(N5)                                       &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)       &trans
+&trans    &kp LEFT_SHIFT  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &kp Paste                                        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
+&trans    &kp F1          &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &kp F5      &kp Undo                   &kp Redo  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10          &kp RCTRL
+                                                               &trans           &trans      &trans    &trans    &mo 4  &trans    &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -96,7 +96,7 @@
 &kp INS  &kp EXCL  &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT                                        &kp CARET   &kp AMPS      &kp ASTRK     &kp LPAR  &kp RPAR  &kp DEL
 &none    &kp BSLH  &kp MINUS  &kp EQUAL  &kp LBKT    &kp RBKT                                           &kp HOME    &kp RSHFT     &kp RCTRL     &kp LALT  &kp RGUI  &kp END
 &trans   &kp PIPE  &kp UNDER  &kp PLUS   &kp LBRC    &kp RBRC     &sk RALT                   &kp K_APP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &none     &kp RCTRL
-                                         &trans      &trans       &trans    &mo 3    &trans  &trans     &trans      &trans
+                                         &trans      &trans       &trans    &mo 4    &trans  &trans     &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
