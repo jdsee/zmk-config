@@ -23,18 +23,6 @@
 #define Redo   LC(Y)
 
 / {
-    macros {
-        nav_escape_alt: nav_escape_alt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT &mo 0>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LALT &mo 0>
-                ;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -89,7 +77,7 @@
 &kp LA(W)  &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)      &kp LA(N5)                                              &kp LA(N6)      &kp LA(N7)      &kp LA(N8)  &kp LA(N9)  &kp LA(N0)         &trans
 &trans     &kp LEFT_SHIFT  &kp LALT        &kp LA(O)       &kp LA(F)       &kp LS(LA(SPACE))                                       &kp LA(H)       &kp LA(J)       &kp LA(K)   &kp LA(L)   &kp LA(LESS_THAN)  &kp LA(GREATER_THAN)
 &trans     &kp LS(LA(N1))  &kp LS(LA(N2))  &kp LS(LA(N3))  &kp LS(LA(N4))  &kp LA(LS(N5))     &kp Undo                   &kp Redo  &kp LS(LA(N6))  &kp LA(LS(N7))  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)         &trans
-                                                           &trans          &trans             &trans    &trans    &mo 3  &nav_escape_alt   &trans          &trans
+                                                           &trans          &trans             &trans    &trans    &mo 3  &mo 8    &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -157,6 +145,20 @@
 &trans  &trans        &trans        &trans        &trans        &trans                                                       &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS         &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &trans                           &trans        &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
                                                   &trans        &trans        &trans  &trans    &kp BACKSPACE  &kp NUMBER_0  &kp EQUAL      &trans
+            >;
+        };
+
+        nav_escape_alt_layer {
+            /* Escapes nav_layer back to default-layer typing with Alt held.
+             * Outranks nav_layer (2) so its bindings win instead of nav_layer's,
+             * everywhere nav_layer isn't already &trans.
+             */
+
+            bindings = <
+&kp LA(TAB)  &kp LA(Q)  &kp LA(W)  &kp LA(E)  &kp LA(R)  &kp LA(T)                                    &kp LA(Y)  &kp LA(U)  &kp LA(I)     &kp LA(O)    &kp LA(P)      &trans
+&trans       &kp LA(A)  &kp LA(S)  &kp LA(D)  &kp LA(F)  &kp LA(G)                                    &kp LA(H)  &kp LA(J)  &kp LA(K)     &kp LA(L)    &kp LA(SEMI)   &kp LA(SQT)
+&trans       &kp LA(Z)  &kp LA(X)  &kp LA(C)  &kp LA(V)  &kp LA(B)  &mo 7                    &caps_word  &kp LA(N)  &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)  &kp LA(SLASH)  &trans
+                                              &trans     &trans     &trans  &trans    &trans  &trans     &trans     &trans
             >;
         };
     };
