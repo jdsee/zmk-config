@@ -39,7 +39,7 @@
 &kp TAB               &kp Q  &kp W  &kp E  &kp R         &kp T                                                                    &kp Y      &kp U     &kp I      &kp O    &kp P      &kp MINUS
 &mt LEFT_CONTROL ESC  &kp A  &kp S  &kp D  &kp F         &kp G                                                                    &kp H      &kp J     &kp K      &kp L    &kp SEMI   &mt RCTRL SQT
 &sk LEFT_SHIFT        &kp Z  &kp X  &kp C  &kp V         &kp B          &mo 7                                        &caps_word   &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-                                           &kp LEFT_GUI  &kp BACKSPACE  &lt 4 LA(SPACE)  &lt 1 TAB    &lt 2 LS(TAB)  &lt 5 ENTER  &kp SPACE  &kp RGUI
+                                           &kp LEFT_ALT  &kp BACKSPACE  &lt 4 LG(SPACE)  &lt 1 TAB    &lt 2 LS(TAB)  &lt 5 ENTER  &kp SPACE  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -57,8 +57,8 @@
             bindings = <
 &kp Copy  &kp N1      &kp N2             &kp N3            &kp N4           &kp N5                                                &kp N6     &kp N7    &kp N8    &kp N9     &kp N0           &trans
 &trans    &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_PP          &kp C_VOLUME_UP  &kp C_NEXT                                            &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
-&trans    &trans      &kp LSHIFT         &kp LEFT_CONTROL  &kp LEFT_ALT     &trans      &kp Undo                   &kp Redo       &trans     &kp LBKT  &kp RBKT  &kp F9     &kp F10          &trans
-                                                           &trans           &trans      &trans    &trans    &mo 3  &kp RIGHT_GUI  &kp RCTRL  &sl 6
+&trans    &trans      &kp LSHIFT         &kp LEFT_CONTROL  &kp LEFT_GUI     &trans      &kp Undo                   &kp Redo       &trans     &kp LBKT  &kp RBKT  &kp F9     &kp F10          &trans
+                                                           &trans           &trans      &trans    &trans    &mo 3  &kp RIGHT_ALT  &kp RCTRL  &sl 6
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -76,7 +76,7 @@
             bindings = <
 &kp PIPE  &kp EXCL  &kp AT          &kp HASH          &kp DOLLAR       &kp PERCENT                                           &kp CARET   &kp AMPS          &kp ASTRK          &kp LPAR         &kp RPAR  &kp PLUS
 &none     &kp BSLH  &kp MINUS       &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp PIPE                                              &kp EQUAL   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LT           &kp GT    &kp PIPE
-&trans    &kp PIPE  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI     &kp LEFT_BRACE  &sk RALT                   &kp K_APP  &kp C_MUTE  &kp RIGHT_GUI     &kp RCTRL          &kp RIGHT_SHIFT  &none     &kp RCTRL
+&trans    &kp PIPE  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT     &kp LEFT_BRACE  &sk RALT                   &kp K_APP  &kp C_MUTE  &kp RIGHT_ALT     &kp RCTRL          &kp RIGHT_SHIFT  &none     &kp RCTRL
                                                       &trans           &trans          &trans    &mo 3    &trans  &trans     &trans      &trans
             >;
 
@@ -88,14 +88,14 @@
  * -------------------------------------------------------------------------------------------------------------------------------------
  * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
  * | RESET | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       | RESET |
- * |       | LGUI  | LALT  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
+ * |       | LALT  | LGUI  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
  *                                 |       |       |       |       |---|       |       |       |       |
  */
 
             bindings = <
 &none       &to 0         &to 0         &to 0         &none         &none                                               &none   &kp F11  &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &ext_power EP_ON
 &sys_reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                        &none   &none    &none         &none            &none              &sys_reset
-&none       &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHIFT    &none         &bt BT_CLR                    &none   &none   &none    &out OUT_USB  &out OUT_BLE     &none              &bootloader
+&none       &kp LALT      &kp LGUI      &kp LCTRL     &kp LSHIFT    &none         &bt BT_CLR                    &none   &none   &none    &out OUT_USB  &out OUT_BLE     &none              &bootloader
                                                       &trans        &trans        &trans      &trans    &trans  &trans  &trans  &trans
             >;
 
@@ -112,10 +112,10 @@
  */
 
             bindings = <
-&kp LA(W)     &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)      &kp LA(N5)                                                     &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(LESS_THAN)  &kp LA(GREATER_THAN)
-&lt 5 ESCAPE  &kp LEFT_SHIFT  &kp LALT        &kp LA(O)       &kp LA(F)       &kp LS(LA(SPACE))                                              &kp LA(H)       &kp LA(J)       &kp LA(K)       &kp LA(L)       &kp LA(O)          &kp RCTRL
-&trans        &kp LS(LA(N1))  &kp LS(LA(N2))  &kp LS(LA(N3))  &kp LS(LA(N4))  &kp LA(LS(N5))     &kp Undo                   &kp Redo         &kp LS(LA(N6))  &kp LA(LS(N7))  &kp LA(LS(N8))  &kp LA(LS(N9))  &kp LA(LS(N0))     &trans
-                                                              &trans          &trans             &trans    &trans    &mo 2  &lt 5 LA(ENTER)  &kp LA(SPACE)   &trans
+&kp LG(W)     &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)                                                     &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(LESS_THAN)  &kp LG(GREATER_THAN)
+&lt 5 ESCAPE  &kp LEFT_SHIFT  &kp LGUI        &kp LG(O)       &kp LG(F)       &kp LS(LG(SPACE))                                              &kp LG(H)       &kp LG(J)       &kp LG(K)       &kp LG(L)       &kp LG(O)          &kp RCTRL
+&trans        &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(N3))  &kp LS(LG(N4))  &kp LG(LS(N5))     &kp Undo                   &kp Redo         &kp LS(LG(N6))  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &kp LG(LS(N0))     &trans
+                                                              &trans          &trans             &trans    &trans    &mo 2  &lt 5 LG(ENTER)  &kp LG(SPACE)   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -128,9 +128,9 @@
              */
 
             bindings = <
-&kp LA(TAB)  &kp LA(Q)  &kp LA(W)  &kp LA(E)  &kp LA(R)  &kp LA(T)                                        &kp LA(Y)  &kp LA(U)  &kp LA(I)      &kp LA(LC(O))  &kp LA(P)      &trans
-&trans       &kp LA(A)  &kp LA(S)  &kp LA(D)  &kp LA(F)  &kp LA(G)                                        &kp LA(H)  &kp LA(J)  &kp LA(K)      &kp LA(L)      &kp LA(SEMI)   &kp LA(SQT)
-&trans       &kp LA(Z)  &kp LA(X)  &kp LA(C)  &kp LA(V)  &kp LA(B)  &mo 7                     &caps_word  &kp LA(N)  &kp LA(M)  &kp LA(COMMA)  &kp LA(DOT)    &kp LA(SLASH)  &trans
+&kp LG(TAB)  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)                                        &kp LG(Y)  &kp LG(U)  &kp LG(I)      &kp LG(LC(O))  &kp LG(P)      &trans
+&trans       &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)                                        &kp LG(H)  &kp LG(J)  &kp LG(K)      &kp LG(L)      &kp LG(SEMI)   &kp LG(SQT)
+&trans       &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)  &mo 7                     &caps_word  &kp LG(N)  &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)    &kp LG(SLASH)  &trans
                                               &trans     &trans     &trans  &trans    &trans  &trans      &trans     &trans
             >;
         };
