@@ -112,8 +112,8 @@
  */
 
             bindings = <
-&kp LG(W)     &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)                                                     &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(LESS_THAN)  &kp LG(GREATER_THAN)
-&lt 5 ESCAPE  &kp LEFT_SHIFT  &kp LGUI        &kp LG(O)       &kp LG(F)       &kp LS(LG(SPACE))                                              &kp LG(H)       &kp LG(J)       &kp LG(K)       &kp LG(L)       &kp LG(O)          &kp RCTRL
+&kp LG(W)     &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)                                                     &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(LESS_THAN)  &kp LG(O)
+&lt 5 ESCAPE  &kp LEFT_SHIFT  &kp LGUI        &kp LG(O)       &kp LG(F)       &kp LS(LG(SPACE))                                              &kp LG(H)       &kp LG(J)       &kp LG(K)       &kp LG(L)       &kp LG(GT)         &kp RCTRL
 &trans        &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LS(LG(N3))  &kp LS(LG(N4))  &kp LG(LS(N5))     &kp Undo                   &kp Redo         &kp LS(LG(N6))  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &kp LG(LS(N0))     &trans
                                                               &trans          &trans             &trans    &trans    &mo 2  &lt 5 LG(ENTER)  &kp LG(SPACE)   &trans
             >;
