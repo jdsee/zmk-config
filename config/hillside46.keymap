@@ -112,10 +112,10 @@
  */
 
             bindings = <
-&kp LA(W)  &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)      &kp LA(N5)                                                     &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(N0)         &kp LA(O)
-&mo 5      &kp LEFT_SHIFT  &kp LALT        &kp LA(O)       &kp LA(F)       &kp LS(LA(SPACE))                                              &kp LA(H)       &kp LA(J)       &kp LA(K)       &kp LA(L)       &kp LA(LESS_THAN)  &kp LA(GREATER_THAN)
-&trans     &kp LS(LA(N1))  &kp LS(LA(N2))  &kp LS(LA(N3))  &kp LS(LA(N4))  &kp LA(LS(N5))     &kp Undo                   &kp Redo         &kp LS(LA(N6))  &kp LA(LS(N7))  &kp LA(LS(N8))  &kp LA(LS(N9))  &kp LA(LS(N0))     &trans
-                                                           &trans          &trans             &trans    &trans    &mo 2  &lt 5 LA(ENTER)  &kp LA(SPACE)   &trans
+&kp LA(W)     &kp LA(N1)      &kp LA(N2)      &kp LA(N3)      &kp LA(N4)      &kp LA(N5)                                                     &kp LA(N6)      &kp LA(N7)      &kp LA(N8)      &kp LA(N9)      &kp LA(LESS_THAN)  &kp LA(GREATER_THAN)
+&lt 5 ESCAPE  &kp LEFT_SHIFT  &kp LALT        &kp LA(O)       &kp LA(F)       &kp LS(LA(SPACE))                                              &kp LA(H)       &kp LA(J)       &kp LA(K)       &kp LA(L)       &kp LA(O)          &kp RCTRL
+&trans        &kp LS(LA(N1))  &kp LS(LA(N2))  &kp LS(LA(N3))  &kp LS(LA(N4))  &kp LA(LS(N5))     &kp Undo                   &kp Redo         &kp LS(LA(N6))  &kp LA(LS(N7))  &kp LA(LS(N8))  &kp LA(LS(N9))  &kp LA(LS(N0))     &trans
+                                                              &trans          &trans             &trans    &trans    &mo 2  &lt 5 LA(ENTER)  &kp LA(SPACE)   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
