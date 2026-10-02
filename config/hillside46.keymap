@@ -73,10 +73,10 @@
  */
 
             bindings = <
-&kp Copy  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                       &kp N6      &kp N7        &kp N8    &kp N9        &kp N0           &trans
-&trans    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                       &kp LEFT    &kp DOWN      &kp UP    &kp RIGHT     &kp RIGHT_SHIFT  &kp RIGHT_CONTROL
-&trans    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11                    &kp F12  &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT       &trans
-                                  &trans  &trans   &trans   &trans    &trans  &trans   &trans      &trans
+&kp Copy   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                       &kp N6      &kp N7        &kp N8    &kp N9        &kp N0           &trans
+&kp LCTRL  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                       &kp LEFT    &kp DOWN      &kp UP    &kp RIGHT     &kp RIGHT_SHIFT  &kp RCTRL
+&trans     &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11                    &kp F12  &kp C_PREV  &kp C_VOL_DN  &kp C_PP  &kp C_VOL_UP  &kp C_NEXT       &trans
+                                   &trans  &trans   &trans   &trans    &trans  &trans   &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -92,10 +92,10 @@
  */
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT          &kp HASH          &kp DOLLAR       &kp PERCENT                                               &kp CARET  &kp AMPS          &kp ASTRK          &kp LPAR       &kp RPAR  &kp PLUS
-&none      &kp BSLH  &kp MINUS       &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp PIPE                                                  &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH  &kp PIPE  &kp RCTRL
-&trans     &kp PIPE  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT     &kp LEFT_BRACE  &sk RALT                   &kp K_APP      &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LT         &kp GT    &trans
-                                                       &trans           &trans          &trans    &mo 3    &trans  &kp RIGHT_ALT  &kp RCTRL  &trans
+&kp TILDE  &kp EXCL       &kp AT          &kp HASH          &kp DOLLAR    &kp PERCENT                                             &kp CARET  &kp AMPS          &kp ASTRK          &kp LPAR       &kp RPAR  &kp PLUS
+&kp LCTRL  &kp BSLH       &kp MINUS       &kp LEFT_BRACE    &kp GRAVE     &kp CARET                                               &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH  &kp PIPE  &kp RCTRL
+&trans     &kp BACKSLASH  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_BRACE  &trans                   &trans         &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LT         &kp GT    &trans
+                                                            &trans        &trans          &trans  &mo 3    &trans  &kp RIGHT_ALT  &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
