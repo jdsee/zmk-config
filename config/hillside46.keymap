@@ -22,6 +22,18 @@
 #define Paste  LC(V)
 #define Redo   LC(Y)
 
+/* Re-tapping a hold-tap within this window after a tap always repeats the tap,
+ * so holding a key for auto-repeat (e.g. ESC on &mt, TAB on &lt) works instead
+ * of triggering the hold behavior.
+ */
+&mt {
+    quick-tap-ms = <175>;
+};
+
+&lt {
+    quick-tap-ms = <175>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
