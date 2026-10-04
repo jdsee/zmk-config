@@ -92,10 +92,10 @@
  */
 
             bindings = <
-&kp TILDE  &kp EXCL       &kp AT          &kp HASH          &kp DOLLAR    &kp PERCENT                                             &kp CARET  &kp AMPS          &kp ASTRK          &kp LPAR       &kp RPAR  &kp PLUS
-&kp LCTRL  &kp BSLH       &kp MINUS       &kp LEFT_BRACE    &kp GRAVE     &kp CARET                                               &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH  &kp PIPE  &kp RCTRL
-&trans     &kp BACKSLASH  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_BRACE  &trans                   &trans         &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LT         &kp GT    &trans
-                                                            &trans        &trans          &trans  &mo 3    &trans  &kp RIGHT_ALT  &trans     &kp K_APP
+&kp TILDE  &kp EXCL       &kp AT          &kp HASH          &kp DOLLAR    &kp PERCENT                                             &kp CARET      &kp AMPS          &kp ASTRK          &kp LPAR   &kp RPAR       &kp PLUS
+&kp LCTRL  &kp BSLH       &kp MINUS       &kp LEFT_BRACE    &kp EQUAL     &kp GRAVE                                               &kp LC(CARET)  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp GRAVE  &kp PIPE       &kp RCTRL
+&trans     &kp BACKSLASH  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_BRACE  &trans                   &trans         &none          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH  &kp BACKSLASH  &trans
+                                                            &trans        &trans          &trans  &mo 3    &trans  &kp RIGHT_ALT  &trans         &kp K_APP
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
