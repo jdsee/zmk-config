@@ -55,7 +55,7 @@
 
         num_pad {
             bindings = <&mo 7>;
-            key-positions = <15 14 16>;
+            key-positions = <15 14>;
         };
 
         lshift {
@@ -192,10 +192,10 @@
 
         num_pad {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                                 &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
-&trans  &trans        &trans        &trans        &trans        &trans                                                       &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS         &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                           &trans        &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                                  &trans        &trans        &trans  &trans    &kp BACKSPACE  &kp NUMBER_0  &kp EQUAL      &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                             &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
+&trans  &trans        &trans        &trans        &trans        &trans                                                   &kp MINUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS         &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                       &trans        &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                                  &trans        &trans        &trans  &trans    &kp EQUAL  &kp NUMBER_0  &trans         &trans
             >;
         };
     };
