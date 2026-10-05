@@ -39,6 +39,11 @@
             bindings = <&mo 7>;
             key-positions = <15 16>;
         };
+
+        redo {
+            bindings = <&kp LS(LC(Z))>;
+            key-positions = <24 38>;
+        };
     };
 
     keymap {
