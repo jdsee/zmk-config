@@ -2,8 +2,6 @@ flash:
   sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 /run/media/jdsee/NICENANO
   sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 /run/media/jdsee/NICENANO1
   sync
-  udisksctl unmount -b /run/media/jdsee/NICENANO1
-  udisksctl unmount -b /run/media/jdsee/NICENANO
 
 reset left right:
   #!/usr/bin/env bash
