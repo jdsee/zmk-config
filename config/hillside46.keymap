@@ -59,12 +59,12 @@
         };
 
         lshift {
-            bindings = <&kp LSHIFT>;
+            bindings = <&sk LSHIFT>;
             key-positions = <15 16>;
         };
 
         rshift {
-            bindings = <&kp RSHFT>;
+            bindings = <&sk RSHFT>;
             key-positions = <19 20>;
         };
     };
