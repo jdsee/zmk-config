@@ -55,7 +55,7 @@
 
         num_pad {
             bindings = <&mo 7>;
-            key-positions = <15 16 41>;
+            key-positions = <15 14>;
         };
 
         lshift {
