@@ -55,16 +55,16 @@
 
         num_pad {
             bindings = <&mo 5>;
-            key-positions = <15 14>;
+            key-positions = <16 15 14>;
         };
 
         lshift {
-            bindings = <&sk LSHIFT>;
+            bindings = <&kp LSHIFT>;
             key-positions = <15 16>;
         };
 
         rshift {
-            bindings = <&sk RSHFT>;
+            bindings = <&kp RSHFT>;
             key-positions = <19 20>;
         };
 
