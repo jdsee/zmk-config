@@ -41,6 +41,15 @@
             bindings = <&kp>, <&kp>;
         };
 
+        uml_qt: umlaut_quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <320>;
+            quick-tap-ms = <250>;
+            bindings = <&kp>, <&kp>;
+        };
+
         lt_qt: layer_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -48,6 +57,44 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <250>;
             bindings = <&mo>, <&kp>;
+        };
+
+        /* /, ; and ' already bake in Shift on a German layout, so a plain
+         * &kp can't tell when Shift is also really held. */
+
+        de_slash_qmark: mod_morph_de_slash_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_SLASH>, <&kp DE_QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_semi_colon: mod_morph_de_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_SEMI>, <&kp DE_COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_sqt_dqt: mod_morph_de_sqt_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_SQT>, <&kp DE_DOUBLE_QUOTES>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_comma_lt: mod_morph_de_comma_lt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp DE_LESS_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_dot_gt: mod_morph_de_dot_gt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp DE_GREATER_THAN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -93,9 +140,9 @@
  */
 
             bindings = <
-&kp TAB               &kp Q  &kp W  &kp E  &kp R                    &kp T                                                                                           &kp DE_Y   &mt_qt DE_U_UMLAUT DE_U  &kp I  &mt_qt DE_O_UMLAUT DE_O  &kp P      &kp DE_MINUS
-&mt LEFT_CONTROL ESC  &mt_qt DE_A_UMLAUT DE_A  &mt_qt DE_SZ DE_S  &kp D  &kp F  &kp G                                                                                 &kp H      &kp J  &kp K      &kp L    &kp DE_SEMI   &kp DE_SQT
-&sk LALT              &kp DE_Z  &kp X  &kp C  &kp V        &kp B               &mt C_PREV DEL                                  &mt C_PLAY_PAUSE C_NEXT  &kp N      &kp M  &kp COMMA  &kp DOT  &kp DE_SLASH  &kp RALT
+&kp TAB               &kp Q  &kp W  &kp E  &kp R                    &kp T                                                                                           &kp DE_Y   &uml_qt DE_U_UMLAUT DE_U  &kp I  &uml_qt DE_O_UMLAUT DE_O  &kp P      &kp DE_MINUS
+&mt LEFT_CONTROL ESC  &uml_qt DE_A_UMLAUT DE_A  &uml_qt DE_SZ DE_S  &kp D  &kp F  &kp G                                                                                 &kp H      &kp J  &kp K      &kp L    &de_semi_colon   &de_sqt_dqt
+&sk LALT              &kp DE_Z  &kp X  &kp C  &kp V        &kp B               &mt C_PREV DEL                                  &mt C_PLAY_PAUSE C_NEXT  &kp N      &kp M  &de_comma_lt  &de_dot_gt  &de_slash_qmark  &kp RALT
                                            &lt 5 LC(DE_Z)  &lt_qt 5 BACKSPACE  &kp LEFT_GUI    &lt_qt 1 TAB    &lt_qt 2 ENTER  &sk RSHIFT               &kp SPACE  &none
             >;
 
