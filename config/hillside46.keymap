@@ -144,7 +144,7 @@
 &kp TAB               &kp Q                     &kp W               &kp E  &kp R           &kp T                                                                                   &kp DE_Y   &uml_qt DE_U_UMLAUT DE_U  &kp I         &uml_qt DE_O_UMLAUT DE_O  &kp P            &kp DE_MINUS
 &mt LEFT_CONTROL ESC  &uml_qt DE_A_UMLAUT DE_A  &uml_qt DE_SZ DE_S  &kp D  &kp F           &kp G                                                                                   &kp H      &kp J                     &kp K         &kp L                     &de_semi_colon   &de_sqt_dqt
 &sk LALT              &kp DE_Z                  &kp X               &kp C  &kp V           &kp B          &mt C_PREV DEL                                  &mt C_PLAY_PAUSE C_NEXT  &kp N      &kp M                     &de_comma_lt  &de_dot_gt                &de_slash_qmark  &kp RALT
-                                                                           &lt 3 LC(DE_Z)  &kp BACKSPACE  &kp LEFT_GUI    &lt_qt 1 TAB    &lt_qt 2 ENTER  &sk RSHIFT               &kp SPACE  &mo 10
+                                                                           &lt 3 LC(DE_Z)  &kp BACKSPACE  &kp LEFT_GUI    &lt_qt 1 TAB    &lt_qt 2 ENTER  &sk RSHIFT               &kp SPACE  &mo 5
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -204,6 +204,15 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        kb_config {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans        &kp N2                                                      &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                &out OUT_BLE  &out OUT_TOG  &out OUT_USB  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &bt BT_CLR                    &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans
+                                                  &trans        &trans        &trans      &trans    &trans  &trans          &trans        &trans
+            >;
+        };
+
         num_sym_layer {
             bindings = <
 &kp DE_TILDE  &kp N1              &kp N2        &kp N3             &kp N4              &kp N5                                                &kp N6        &kp N7               &kp N8                &kp N9                   &kp N0                    &kp DE_PLUS
@@ -235,52 +244,6 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
-        sym_layer {
-            /* SYM
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | INS   |   !   |   @   |   #   |   $   |   %   |-----------------------------------|   ^   |   &   |   *   |   (   |   )   | BSPC  |
- * |       |   \   |   -   |   =   |   [   |   ]   |-----------------------------------| HOME  | Shift | Ctrl  | Alt   | Gui   | END   |
- * | Ctrl  |   |   |   _   |   +   |   {   |   }   |SkAltGr|-------------------| MENU  | Mute  | Vol-  | Vol+  | Play  |       | Ctrl  |
- *                                 |       |       |       |  ADJ_L |---|      |       |       |       |
- */
-
-            bindings = <
-&kp DE_TILDE  &kp DE_EXCL       &kp DE_AT       &kp DE_HASH        &kp DE_DOLLAR       &kp DE_PERCENT                                          &kp DE_CARET  &kp DE_AMPS          &kp DE_ASTRK          &kp DE_LPAR   &kp DE_RPAR       &kp DE_PLUS
-&kp LCTRL     &kp DE_GRAVE      &kp DE_MINUS    &kp LC(DE_CARET)   &kp DE_EQUAL        &kp DE_GRAVE                                            &kp LEFT      &kp DOWN             &kp UP                &kp RIGHT     &kp DE_PIPE       &kp RCTRL
-&trans        &kp DE_BACKSLASH  &kp LEFT_SHIFT  &kp DE_LEFT_BRACE  &kp DE_RIGHT_BRACE  &none           &trans                   &trans         &none         &kp DE_LEFT_BRACKET  &kp DE_RIGHT_BRACKET  &kp DE_SLASH  &kp DE_BACKSLASH  &trans
-                                                                   &trans              &trans          &trans  &mo 5    &trans  &kp RIGHT_ALT  &trans        &kp K_APP
-            >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        num_pad {
-            bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                                &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0     &trans
-&trans  &trans        &trans        &trans        &trans        &trans                                                      &kp DE_MINUS   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_PLUS      &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                          &trans        &kp KP_DIVIDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                                  &trans        &trans        &trans  &trans    &kp DE_EQUAL  &kp NUMBER_0  &trans         &trans
-            >;
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-        };
-
-        adj_layer_2 {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans        &kp N2                                                      &trans        &trans        &trans        &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                &out OUT_BLE  &out OUT_TOG  &out OUT_USB  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &bt BT_CLR                    &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &trans  &trans
-                                                  &trans        &trans        &trans      &trans    &trans  &trans          &trans        &trans
-            >;
-        };
     };
 
     conditional_layers {
@@ -288,7 +251,7 @@
 
         adj_layer {
             if-layers = <1 2>;
-            then-layer = <10>;
+            then-layer = <5>;
         };
     };
 };
