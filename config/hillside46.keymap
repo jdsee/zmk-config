@@ -144,7 +144,7 @@
 &kp TAB               &kp Q                     &kp W               &kp E  &kp R           &kp T                                                                                   &kp DE_Y   &uml_qt DE_U_UMLAUT DE_U  &kp I         &uml_qt DE_O_UMLAUT DE_O  &kp P            &kp DE_MINUS
 &mt LEFT_CONTROL ESC  &uml_qt DE_A_UMLAUT DE_A  &uml_qt DE_SZ DE_S  &kp D  &kp F           &kp G                                                                                   &kp H      &kp J                     &kp K         &kp L                     &de_semi_colon   &de_sqt_dqt
 &sk LALT              &kp DE_Z                  &kp X               &kp C  &kp V           &kp B          &mt C_PREV DEL                                  &mt C_PLAY_PAUSE C_NEXT  &kp N      &kp M                     &de_comma_lt  &de_dot_gt                &de_slash_qmark  &kp RALT
-                                                                           &lt 4 LC(DE_Z)  &kp BACKSPACE  &kp LEFT_GUI    &lt_qt 1 TAB    &lt_qt 2 ENTER  &sk RSHIFT               &kp SPACE  &mo 4
+                                                                           &lt 4 LC(DE_Z)  &kp BACKSPACE  &kp LEFT_GUI    &lt_qt 1 TAB    &lt_qt 2 ENTER  &sk RSHIFT               &kp SPACE  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
