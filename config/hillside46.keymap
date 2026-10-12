@@ -107,11 +107,6 @@
     combos {
         compatible = "zmk,combos";
 
-        num_pad {
-            bindings = <&mo 5>;
-            key-positions = <3 4>;
-        };
-
         lshift {
             bindings = <&kp LSHIFT>;
             key-positions = <15 16>;
@@ -274,7 +269,7 @@
         compatible = "zmk,conditional-layers";
 
         adj_layer {
-            if-layers = <1 2>;
+            if-layers = <6 7>;
             then-layer = <3>;
         };
     };
