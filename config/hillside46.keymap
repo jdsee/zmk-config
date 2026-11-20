@@ -125,41 +125,6 @@
          * pause, so it still fires. Plain ';' alone is unaffected either
          * way - it's still bound to &kp SEMICOLON and only gets swallowed
          * when a trigger letter actually follows in time. */
-
-        uml_ae {
-            bindings = <&um_ae>;
-            key-positions = <22 13>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-        };
-
-        uml_oe {
-            bindings = <&um_oe>;
-            key-positions = <22 9>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-        };
-
-        uml_ue {
-            bindings = <&um_ue>;
-            key-positions = <22 7>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-        };
-
-        uml_sz {
-            bindings = <&kp RA(S)>;
-            key-positions = <22 14>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-        };
-
-        uml_sz_win {
-            bindings = <&um_sz_win>;
-            key-positions = <22 25>;
-            timeout-ms = <200>;
-            require-prior-idle-ms = <200>;
-        };
     };
 
     keymap {
@@ -200,8 +165,8 @@
         sym_nav {
             bindings = <
 &kp TILDE  &kp EXCL       &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                                          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR       &kp PLUS
-&kp LCTRL  &kp GRAVE      &kp LBRC  &kp LBKT  &kp LPAR    &kp EQUAL                                            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp GRAVE      &kp RCTRL
-&trans     &kp BACKSLASH  &kp RBRC  &kp RBKT  &kp RPAR    &kp PIPE     &trans                   &trans         &kp PIPE   &kp LBKT   &kp RBKT   &trans     &kp BACKSLASH  &trans
+&kp LCTRL  &kp GRAVE      &kp LPAR  &kp LBKT  &kp LBRC    &kp EQUAL                                            &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp GRAVE      &kp RCTRL
+&trans     &kp BACKSLASH  &kp RPAR  &kp RBKT  &kp RBRC    &kp PIPE     &trans                   &trans         &kp PIPE   &kp LBKT   &kp RBKT   &trans     &kp BACKSLASH  &trans
                                               &trans      &trans       &trans  &mo 4    &trans  &kp RIGHT_ALT  &trans     &kp K_APP
             >;
 
