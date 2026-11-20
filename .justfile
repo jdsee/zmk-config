@@ -1,21 +1,27 @@
-flash:
-  sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 /run/media/jdsee/NICENANO
-  sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 /run/media/jdsee/NICENANO1
+default_left := "/run/media/jdsee/NICENANO1"
+default_right := "/run/media/jdsee/NICENANO"
+
+flash left=default_left right=default_right:
+  sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 {{right}}
+  sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 {{left}}
   sync
 
-reset left right:
-  #!/usr/bin/env bash
-  set -euo pipefail
-  sudo mount {{right}} /mnt/right
-  sudo mount {{left}} /mnt/left
-  sudo cp firmware/settings_reset-nice_nano@2__zmk-zmk.uf2 /mnt/right
-  sudo cp firmware/settings_reset-nice_nano@2__zmk-zmk.uf2 /mnt/left
+flash-left mount=default_left:
+  sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 {{mount}}
   sync
-  sudo umount /mnt/left /mnt/right
+
+flash-right mount=default_right:
+  sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 {{mount}}
+  sync
+
+reset left=default_left right=default_right:
+  sudo cp firmware/settings_reset-nice_nano@2__zmk-zmk.uf2 {{right}}
+  sudo cp firmware/settings_reset-nice_nano@2__zmk-zmk.uf2 {{left}}
+  sync
 
 dl:
   rm -rf firmware/*
   gh run download -n firmware -D firmware
 
-st:
+s:
   gh run view $(gh run list --limit 1 --json databaseId -q '.[0].databaseId')
