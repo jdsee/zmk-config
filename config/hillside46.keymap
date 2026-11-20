@@ -114,6 +114,52 @@
             bindings = <&kp RCTRL>;
             key-positions = <41 23>;
         };
+
+        /* Leader-key umlauts: tap SEMI then one of these within the combo
+         * window to get the umlaut instead of ';' + the letter. require-
+         * prior-idle-ms guards against normal words ending in s/a/o/u
+         * immediately before a statement-terminating ';' (e.g. "items;",
+         * "data;", "menu;") - that's fast in-flow typing with no pause, so
+         * it won't satisfy the idle check and ';' + letter type normally.
+         * Deliberately reaching for ';' to trigger an umlaut does have that
+         * pause, so it still fires. Plain ';' alone is unaffected either
+         * way - it's still bound to &kp SEMICOLON and only gets swallowed
+         * when a trigger letter actually follows in time. */
+
+        uml_ae {
+            bindings = <&um_ae>;
+            key-positions = <22 13>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
+
+        uml_oe {
+            bindings = <&um_oe>;
+            key-positions = <22 9>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
+
+        uml_ue {
+            bindings = <&um_ue>;
+            key-positions = <22 7>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
+
+        uml_sz {
+            bindings = <&kp RA(S)>;
+            key-positions = <22 14>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
+
+        uml_sz_win {
+            bindings = <&um_sz_win>;
+            key-positions = <22 25>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
     };
 
     keymap {
