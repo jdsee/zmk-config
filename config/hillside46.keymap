@@ -194,8 +194,8 @@
  */
 
             bindings = <
-&none        &to 0         &to 0         &to 0         &none         &kp N1                                                      &none         &kp F11       &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &ext_power EP_ON
-&sys_reset   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                &out OUT_BLE  &out OUT_TOG  &out OUT_USB  &none            &none              &sys_reset
+&bootloader  &to 0         &to 0         &to 0         &none         &kp N1                                                      &none         &kp F11       &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &bootloader
+&sys_reset   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                &out OUT_BLE  &out OUT_TOG  &out OUT_USB  &none            &ext_power EP_ON   &sys_reset
 &bootloader  &kp LALT      &kp LGUI      &kp LCTRL     &kp LSHIFT    &none         &bt BT_CLR                    &bt BT_CLR_ALL  &none         &none         &none         &none            &none              &bootloader
                                                        &trans        &trans        &trans      &trans    &trans  &trans          &trans        &trans
             >;
