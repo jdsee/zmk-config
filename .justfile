@@ -1,18 +1,11 @@
-default_left := "/run/media/jdsee/NICENANO1"
-default_right := "/run/media/jdsee/NICENANO"
+default_left := "/run/media/jdsee/NICENANO"
+default_right := "/run/media/jdsee/NICENANO1"
 
-flash left=default_left right=default_right:
-  sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 {{right}}
-  sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 {{left}}
-  sync
+flash:
+  nix run .#flash
 
-flash-left mount=default_left:
-  sudo cp firmware/hillside46_left-nice_nano@2__zmk-zmk.uf2 {{mount}}
-  sync
-
-flash-right mount=default_right:
-  sudo cp firmware/hillside46_right-nice_nano@2__zmk-zmk.uf2 {{mount}}
-  sync
+flash-main part="left":
+  nix run .#flash -- {{part}}
 
 reset left=default_left right=default_right:
   sudo cp firmware/settings_reset-nice_nano@2__zmk-zmk.uf2 {{right}}
