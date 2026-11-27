@@ -283,10 +283,10 @@
 
         uml_single_hand {
             bindings = <
-&trans  &trans           &trans     &trans           &trans           &trans                                    &trans  &trans           &trans           &trans     &trans           &trans
-&trans  &kp DE_O_UMLAUT  &kp DE_SZ  &kp DE_A_UMLAUT  &kp DE_U_UMLAUT  &trans                                    &trans  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_SZ  &kp DE_O_UMLAUT  &trans
-&trans  &trans           &trans     &trans           &trans           &trans  &trans                    &trans  &trans  &trans           &trans           &trans     &trans           &trans
-                                                     &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans     &trans           &trans           &trans           &trans                                       &trans     &trans           &trans           &trans           &trans     &trans
+&trans  &kp DE_SZ  &kp DE_O_UMLAUT  &kp DE_A_UMLAUT  &kp DE_U_UMLAUT  &kp DE_SZ                                    &kp DE_SZ  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_SZ  &trans
+&trans  &trans     &trans           &trans           &trans           &trans     &trans                    &trans  &trans     &trans           &trans           &trans           &trans     &trans
+                                                     &trans           &trans     &trans  &trans    &trans  &trans  &trans     &trans
             >;
         };
     };
